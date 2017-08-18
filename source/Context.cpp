@@ -61,20 +61,20 @@ double Context::getTime()
 
 void Context::createCustomCursor()
 {
-	unsigned char pixels[50 * 50 * 4];
-	memset(pixels, 0xff, sizeof(pixels));
+	unsigned char pixels[25 * 25 * 4];
+	memset(pixels, 255, sizeof(pixels));
 
-	for (int i = 0; i < 50*50*4; i+=51*4)
+	for (int i = 0; i < 25*25*4; i+=26*4)
 	{
 		pixels[i  ] = 255;
 		pixels[i+1] = 0;
-		pixels[i+2] = 0;
+		pixels[i+2] = 255;
 		pixels[i+3] = 255;
 	}
 
 	GLFWimage image;
-	image.width  = 50;
-	image.height = 50;
+	image.width  = 25;
+	image.height = 25;
 	image.pixels = pixels;
 
 	GLFWcursor* cursor = glfwCreateCursor(&image, 0, 0);
