@@ -20,14 +20,13 @@ int main()
 	unsigned idxs[6] = { 0,1,2,3,2,0 };
 
 	Geometry g = makeGeometry(verts, 4, idxs, 6);
-	Geometry gt = makeNGon(9, .5f);
+	Geometry gt = makeCheckerboard(1, 1);
 
 	const char* vsource =
 		"#version 450\n"
 		"layout(location = 0) in vec4 position;\n"
 		"layout(location = 1) in vec4 color;\n"
-		"out vec4 vPos;\n"
-		"out vec4 vColor;\n"
+		"flat out vec4 vColor;\n"
 		"void main ()\n"
 		"{gl_Position = position;  vColor = color;}\n";
 		
@@ -36,9 +35,8 @@ int main()
 
 	const char* fsource =
 		"#version 450\n"
-		"in vec4 vPos;\n"
-		"in vec4 vColor;\n"
 		"out vec4 outColor;\n"
+		"flat in vec4 vColor;\n"
 		"void main ()\n"
 		"{outColor = vColor;} \n";
 
@@ -51,8 +49,8 @@ int main()
 	{
 		//std::cout << context.getKey('K') << std::endl; 
 		//std::cout << context.getTime() << std::endl;
-		s0_draw(f, s, g);
-		
+		//s0_draw(f, s, g);
+		s0_draw(f, s, gt);
 	}
 	freeGeometry(g);
 	freeShader(s);
