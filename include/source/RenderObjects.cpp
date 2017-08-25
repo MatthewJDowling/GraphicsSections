@@ -45,7 +45,9 @@ Geometry makeGeometry(const Vertex *verts, size_t vsize,
 	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)32);//texture coordinate
 
 
-	
+	glEnableVertexAttribArray(3);
+	glVertexAttribPointer(3, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)40);//normal
+
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 

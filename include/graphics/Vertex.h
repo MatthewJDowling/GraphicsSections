@@ -8,4 +8,6 @@ struct Vertex
 	glm::vec4 color; 
 	glm::vec2 textureCoordinate;//UV
 
+	glm::vec4 normal;
+
 };

@@ -64,28 +64,35 @@ Geometry loadGeometry(const char *path)
 
 	tinyobj::LoadObj(&attrib, &shapes, &materials, &err, path);
 
-	size_t vsize = attrib.vertices.size() / 3;
-	Vertex* verts = new Vertex[vsize];
-
-	for (size_t i = 0; i < vsize; i++)
-	{
-		const float *p = &attrib.vertices[i * 3];
-		verts[i].position = {p[0], p[1], p[2],1};
-	}
-
 	size_t isize = shapes[0].mesh.indices.size();
-	size_t *indices = new unsigned[isize];
-	
-	for (size_t i = 0; i < isize; ++i)
+	size_t *indicies = new unsigned[isize];
+
+	size_t vsize = isize;
+	Vertex *verts = new Vertex[vsize];
+
+	for (size_t i = 0; i < isize; i++)
 	{
-		indices[i] = shapes[0].mesh.indices[0].vertex_index;
+		indicies[i] = i;
+
+		int pi = shapes[0].mesh.indices[i].vertex_index;
+		int ni = shapes[0].mesh.indices[i].normal_index;
+		int ti = shapes[0].mesh.indices[i].texcoord_index;
+
+		const float *p = &attrib.vertices [pi * 3];
+		const float *n = &attrib.normals  [ni * 3];
+		const float *t = &attrib.texcoords[ti * 2];
+
+		verts[i].position		   = {p[0],p[1],p[2],1};
+		verts[i].textureCoordinate = {t[0],t[1]};
+		verts[i].normal			   = { n[0],n[1],n[2],0 };
 	}
 
+	
 
-	retval = makeGeometry(verts,vsize,indices,isize);
+	retval = makeGeometry(verts,vsize,indicies,isize);
 
 	delete[] verts;
-	delete[] indices;
+	delete[] indicies;
 
 	return retval;
 }

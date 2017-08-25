@@ -8,8 +8,12 @@ struct Framebuffer;
 struct Texture;
 void s0_draw(const Framebuffer &f, const Shader &s, const Geometry &g);
 
-void clearFramebuffer(const Framebuffer &F);
+void clearFramebuffer(const Framebuffer &F, bool color = true,  bool depth = true);
 
+
+enum RenderFlag { DEPTH = 1 };
+
+void setFlags(int flags);
 
 void setUniform(const Shader &s, int location, float value);
 void setUniform(const Shader &s, int location, int value);
@@ -25,9 +29,9 @@ namespace __internal
 	void t_setUniform(const Shader &s, int &loc_io, int &tex_io, const Texture &val);
 
 
-	void t_SetUniform(const Shader &s, int &loc_io, int &tex_io, const glm::vec3 &val);
-	void t_SetUniform(const Shader &s, int &loc_io, int &tex_io, const glm::vec4 &val);
-	void t_SetUniform(const Shader &s, int &loc_io, int &tex_io, const glm::mat4 &val);
+	void t_setUniform(const Shader &s, int &loc_io, int &tex_io, const glm::vec3 &val);
+	void t_setUniform(const Shader &s, int &loc_io, int &tex_io, const glm::vec4 &val);
+	void t_setUniform(const Shader &s, int &loc_io, int &tex_io, const glm::mat4 &val);
 }
 
 //the recursive template function.
@@ -47,5 +51,4 @@ void setUniforms(const Shader &s, int &loc_io, int &tex_io, const T &val)
 {
 	__internal::t_setUniform(s, loc_io, tex_io, val);
 }
-
 
