@@ -87,7 +87,7 @@ Geometry loadGeometry(const char *path)
 		verts[i].normal			   = { n[0],n[1],n[2],0 };
 	}
 
-	
+	//Fookin Lazer sights
 
 	retval = makeGeometry(verts,vsize,indicies,isize);
 

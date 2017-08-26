@@ -50,6 +50,11 @@ void setUniform(const Shader &s, int location, const Texture &value, unsigned sl
 	glProgramUniform1i(s.handle,location,slot);
 }
 
+void setUniform(const Shader &s, int location, glm::mat4 val)
+{
+	glProgramUniformMatrix4fv(s.handle, location, 1, 0, glm::value_ptr(val));
+}
+
 
 
 namespace __internal

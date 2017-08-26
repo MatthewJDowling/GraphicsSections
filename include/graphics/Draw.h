@@ -19,6 +19,9 @@ void setUniform(const Shader &s, int location, float value);
 void setUniform(const Shader &s, int location, int value);
 void setUniform(const Shader &s, int location, const Texture &value, unsigned slot);
 
+
+void setUniform(const Shader &s, int location, glm::mat4 val);
+
 //These will be called each time the variadic unpacking recursion takes place
 //Based upon what uniforms are passed in, the correct function will automatically 
 // be called. 
