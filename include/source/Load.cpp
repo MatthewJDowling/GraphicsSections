@@ -89,6 +89,8 @@ Geometry loadGeometry(const char *path)
 
 	//Fookin Lazer sights
 
+	solveTangents(verts, vsize, indicies, isize);
+
 	retval = makeGeometry(verts,vsize,indicies,isize);
 
 	delete[] verts;

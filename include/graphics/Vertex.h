@@ -10,4 +10,7 @@ struct Vertex
 
 	glm::vec4 normal;
 
+	glm::vec4 tanget; 
+	glm::vec4 bitangent;
+
 };
