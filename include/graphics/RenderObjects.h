@@ -31,7 +31,10 @@ void freeShader(Shader &s);
 
 struct Framebuffer
 {
-	unsigned handle, width, height;
+	unsigned handle, width, height, nTargets;
+
+	Texture depthTarget;
+	Texture targets[8];
 
 };
 
@@ -43,7 +46,11 @@ struct Texture
 //RGBA = 4 channels
 // 512x512 image = 262144 pixels * 4 channells = ~ one million bytes
 
-Texture makeTexture(unsigned w, unsigned h, unsigned c, const unsigned char *pixels);
+Texture makeTexture(unsigned w, unsigned h, unsigned c, const void * pixels, bool isFloat = false);
 
 void freeTexture(Texture &t);
+
+Framebuffer MakeFrameBuffer(unsigned w, unsigned h, unsigned c, bool hasDepth, unsigned nTargets, unsigned nFloatTargets);
+
+void freeFrameBuffer(Framebuffer & fb);
 
