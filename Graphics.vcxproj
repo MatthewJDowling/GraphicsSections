@@ -130,6 +130,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\source\GameObjects.cpp" />
     <ClCompile Include="include\source\Context.cpp" />
     <ClCompile Include="include\source\Draw.cpp" />
     <ClCompile Include="include\source\genShape.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="include\source\RenderObjects.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\graphics\GameObjects.h" />
     <ClInclude Include="include\graphics\Context.h" />
     <ClInclude Include="include\graphics\Draw.h" />
     <ClInclude Include="include\graphics\genShape.h" />

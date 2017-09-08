@@ -11,7 +11,13 @@ void s0_draw(const Framebuffer &f, const Shader &s, const Geometry &g);
 void clearFramebuffer(const Framebuffer &F, bool color = true,  bool depth = true);
 
 
-enum RenderFlag { DEPTH = 1 };
+enum RenderFlag
+{
+	None     = 0,
+	DEPTH    = 1,
+	ADDITIVE = 2,
+
+};
 
 void setFlags(int flags);
 

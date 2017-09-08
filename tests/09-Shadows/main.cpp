@@ -12,7 +12,7 @@ void main()
 
 	Context context;
 	context.init();
-	Framebuffer fb_shadow = makeFramebuffer(2048, 2048, 0, true, 0, 0);
+	Framebuffer fb_shadow = MakeFrameBuffer(2048, 2048, 0, true, 0, 0);
 	Framebuffer screen = { 0,800,600 };
 
 	Vertex vquad[] =

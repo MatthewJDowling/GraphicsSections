@@ -47,5 +47,29 @@
     <None Include="direct.frag">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="quad.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="quad.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gpass.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="gpass.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cpass.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="cpass.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lpassD.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="lpassD.vert">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

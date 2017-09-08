@@ -29,19 +29,24 @@ Shader makeShader(const char *vert_source, const char *frag_source);
 
 void freeShader(Shader &s);
 
+struct Texture
+{
+	unsigned handle;
+};
+
 struct Framebuffer
 {
-	unsigned handle, width, height, nTargets;
+	unsigned handle;
+	unsigned width, height;
+	unsigned nTargets;
+	
 
 	Texture depthTarget;
 	Texture targets[8];
 
 };
 
-struct Texture
-{
-	unsigned handle;
-};
+
 
 //RGBA = 4 channels
 // 512x512 image = 262144 pixels * 4 channells = ~ one million bytes
