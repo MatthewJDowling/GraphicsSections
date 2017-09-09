@@ -15,7 +15,7 @@ struct Camera
 struct SpecGloss
 {
 	Geometry geo;
-	
+	std::string objName;
 	glm::mat4 model;
 	Texture diffuse;
 	Texture specular;
@@ -23,6 +23,9 @@ struct SpecGloss
 	
 	float gloss;
 };
+
+void createAllAssets(SpecGloss objects[], int size);
+
 
 struct StandardLight
 {

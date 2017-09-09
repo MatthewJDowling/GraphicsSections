@@ -56,6 +56,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-Deferred", "..\10-Deferr
 		{0ECDDB63-F613-4491-B3F0-A9532AE98E42} = {0ECDDB63-F613-4491-B3F0-A9532AE98E42}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentProject", "AssessmentProject\AssessmentProject.vcxproj", "{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0ECDDB63-F613-4491-B3F0-A9532AE98E42} = {0ECDDB63-F613-4491-B3F0-A9532AE98E42}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -176,6 +181,16 @@ Global
 		{3AD36814-6E6A-48A7-8C3B-CB89AC032FA2}.Release|x64.Build.0 = Release|x64
 		{3AD36814-6E6A-48A7-8C3B-CB89AC032FA2}.Release|x86.ActiveCfg = Release|Win32
 		{3AD36814-6E6A-48A7-8C3B-CB89AC032FA2}.Release|x86.Build.0 = Release|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Debug|x64.ActiveCfg = Debug|x64
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Debug|x64.Build.0 = Debug|x64
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Debug|x86.ActiveCfg = Debug|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Debug|x86.Build.0 = Debug|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Release|Any CPU.ActiveCfg = Release|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Release|x64.ActiveCfg = Release|x64
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Release|x64.Build.0 = Release|x64
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Release|x86.ActiveCfg = Release|Win32
+		{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

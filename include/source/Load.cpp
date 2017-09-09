@@ -27,7 +27,7 @@ Texture loadTexture(const char *path)
 	stbi_image_free(pixels);
 
 	return retval; 
-
+	 
 }
 
 Shader loadShader(const char * vpath, const char * fpath)
