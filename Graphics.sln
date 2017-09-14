@@ -56,10 +56,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-Deferred", "..\10-Deferr
 		{0ECDDB63-F613-4491-B3F0-A9532AE98E42} = {0ECDDB63-F613-4491-B3F0-A9532AE98E42}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentProject", "AssessmentProject\AssessmentProject.vcxproj", "{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}"
-	ProjectSection(ProjectDependencies) = postProject
-		{0ECDDB63-F613-4491-B3F0-A9532AE98E42} = {0ECDDB63-F613-4491-B3F0-A9532AE98E42}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AssessmentProject", "tests\AssessmentProject\AssessmentProject.vcxproj", "{CC7762D9-9BA8-4E63-92A0-4C6C4DB089C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

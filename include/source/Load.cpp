@@ -64,7 +64,7 @@ Geometry loadGeometry(const char *path)
 
 	tinyobj::LoadObj(&attrib, &shapes, &materials, &err, path);
 
-	size_t isize = shapes[0].mesh.indices.size();
+ 	size_t isize = shapes[0].mesh.indices.size();
 	size_t *indicies = new unsigned[isize];
 
 	size_t vsize = isize;
@@ -87,7 +87,7 @@ Geometry loadGeometry(const char *path)
 		verts[i].normal			   = { n[0],n[1],n[2],0 };
 	}
 
-	//Fookin Lazer sights
+
 
 	solveTangents(verts, vsize, indicies, isize);
 

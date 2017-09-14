@@ -33,7 +33,7 @@
     <ClCompile Include="include\source\GameObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\graphics\AssetManager.cpp">
+    <ClCompile Include="include\source\AssMan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -62,7 +62,7 @@
     <ClInclude Include="include\graphics\GameObjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\graphics\AssetManager.h">
+    <ClInclude Include="include\graphics\AssMan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
